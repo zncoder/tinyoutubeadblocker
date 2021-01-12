@@ -6,6 +6,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 let urlPrefixes = [
   "https://www.youtube.com/get_video_info", // <-- ads
+  "https://www.youtube.com/get_midroll_info", // <-- ads
   "https://www.youtube.com/youtubei/v1/log_event",
   "https://www.youtube.com/ptracking",
   "https://www.youtube.com/pagead/conversion/",
@@ -17,10 +18,13 @@ let urlPrefixes = [
 let hostSuffixes = [
   ".doubleclick.net",
   ".googlesyndication.com",
+  ".googleadservices.com",
+  ".ggpht.com",
 ]
 
 function filterRequest(details) {
   let url = details.url
+  //console.log(`url:${url}`)
   for (let p of urlPrefixes) {
     if (url.startsWith(p)) {
       //console.log(`block youtube ad:${url}`)

@@ -1,9 +1,9 @@
 {
   "name": "tinyoutubeadblocker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "A tiny youtube adblocker",
-	"permissions": ["webRequest", "webRequestBlocking", "https://www.youtube.com/"],
+	"permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
 	"icons": {
 		"48": "icons/48.png"
 	},
