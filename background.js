@@ -19,12 +19,12 @@ let hostSuffixes = [
   ".doubleclick.net",
   ".googlesyndication.com",
   ".googleadservices.com",
-  ".ggpht.com",
+  //".ggpht.com",
 ]
 
 function filterRequest(details) {
   let url = details.url
-  //console.log(`url:${url}`)
+  console.log(`${details.url}`)
   for (let p of urlPrefixes) {
     if (url.startsWith(p)) {
       //console.log(`block youtube ad:${url}`)
